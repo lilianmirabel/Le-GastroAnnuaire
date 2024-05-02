@@ -6,6 +6,9 @@ class TypeResto(models.Model):
     noType              = models.AutoField(primary_key=True)
     nomType             = models.CharField(max_length=20)
 
+    def __str__(self):
+        return self.nomType
+
 class Restaurant(models.Model):
     noRestaurant        = models.AutoField(primary_key=True)
     nomRestaurant       = models.CharField(max_length=25)
